@@ -19,6 +19,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
     private float x, y;
 
@@ -43,25 +45,32 @@ public class MainActivity extends AppCompatActivity {
 
                 if(val.equals("1")){
                     Toast.makeText(getApplicationContext(), "You are feeling "+val + " Level of happines", Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(MainActivity.this, feeling1a.class);
+                    int rand = new Random().nextInt()%2;
+                    Intent intent = null;
+                    if(rand == 0){
+                        intent = new Intent(MainActivity.this, feeling1a.class);
+
+                    }else {
+                        intent = new Intent(MainActivity.this, feeling1b.class);
+                    }
                     startActivity(intent);
                 }else if(val.equals("2")){
                     Toast.makeText(getApplicationContext(), "You are feeling "+val + " Level of happines", Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(MainActivity.this, feeling1a.class);
+                    Intent intent = new Intent(MainActivity.this, feeling2a.class);
                     startActivity(intent);
                 }else if(val.equals("3")){
                     Toast.makeText(getApplicationContext(), "You are feeling "+val + " Level of happines", Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(MainActivity.this, feeling1a.class);
+                    Intent intent = new Intent(MainActivity.this, feeling3a.class);
                     startActivity(intent);
                 }
                 else if(val.equals("4")){
                     Toast.makeText(getApplicationContext(), "You are feeling "+val + " Level of happines", Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(MainActivity.this, feeling1a.class);
+                    Intent intent = new Intent(MainActivity.this, feeling4a.class);
                     startActivity(intent);
                 }
                 else if(val.equals("5")){
                     Toast.makeText(getApplicationContext(), "You are feeling "+val + " Level of happines", Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(MainActivity.this, feeling1a.class);
+                    Intent intent = new Intent(MainActivity.this, feeling5a.class);
                     startActivity(intent);}
             }
         });
