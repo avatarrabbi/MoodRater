@@ -21,10 +21,18 @@
         <activity
             android:name=".feeling1a"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".feeling2a" />
-        <activity android:name=".feeling3a" />
-        <activity android:name=".feeling4a" />
-        <activity android:name=".feeling5a"></activity>
+        <activity android:name=".feeling2a"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".feeling3a"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".feeling4a"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".feeling5a"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".feeling1b"
+            android:parentActivityName=".MainActivity">
+
+        </activity>
     </application>
 
 </manifest>
